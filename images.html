@@ -4,27 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Images</title>
+    <title>GoonOnTheGo Images</title>
+    <meta name="theme-color" content="#1c2a20">
+    <link rel="icon" type="image/svg+xml" href="assets/vojta-mark.svg">
+    <link rel="stylesheet" href="assets/pixel-theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Google Search</a>
+    <div class="pixel-sky" aria-hidden="true">
+        <span class="sky-moon"></span>
+        <span class="shooting-star" style="--star-left:35%;--star-top:3%;--star-duration:9s;--star-delay:-.4s"></span>
+        <span class="shooting-star" style="--star-left:72%;--star-top:10%;--star-duration:9s;--star-delay:-1.9s"></span>
+        <span class="shooting-star" style="--star-left:98%;--star-top:28%;--star-duration:9s;--star-delay:-3.4s"></span>
+        <span class="shooting-star" style="--star-left:46%;--star-top:35%;--star-duration:9s;--star-delay:-4.9s"></span>
+        <span class="shooting-star" style="--star-left:83%;--star-top:2%;--star-duration:9s;--star-delay:-6.4s"></span>
+        <span class="shooting-star" style="--star-left:26%;--star-top:46%;--star-duration:9s;--star-delay:-7.9s"></span>
+    </div>
+    <nav aria-label="Project navigation">
+        <a class="portfolio-return" href="https://itzlebyy.github.io/#projekty">← vo<span class="dotted-j">j</span>ta / portfolio</a>
+        <a href="index.html">GoonOnTheGo Search</a>
     </nav>
 
     <main class="search-page">
-        <h1 class="logo">Google <span class="images-label">Images</span></h1>
+        <h1 class="logo" aria-label="GoonOnTheGo Images"><span class="blue">Goon</span><span class="red">On</span><span class="yellow">The</span><span class="green">Go</span><span class="images-label">Images</span></h1>
 
         <form action="https://www.google.com/search" method="GET">
             <input type="hidden" name="udm" value="2">
 
             <input class="search-box" type="text"
-                   name="q" aria-label="Image search" required>
+                   name="q" aria-label="Image search" placeholder="Search images..." required>
 
             <div class="buttons">
                 <button type="submit">Search Images</button>
             </div>
         </form>
     </main>
+    <a class="ai-citation" href="README.md#citace-ai">Citace použití AI ↗</a>
 </body>
 </html>
