@@ -1,62 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoonOnTheGo Advanced Search</title>
-    <meta name="theme-color" content="#1c2a20">
-    <link rel="icon" type="image/svg+xml" href="assets/vojta-mark.svg">
-    <link rel="stylesheet" href="assets/pixel-theme.css">
+    <meta name="description" content="Refine your Google search with words, exact phrases, alternatives, and exclusions. A CS50 Web project.">
+    <title>Google Advanced Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="pixel-sky" aria-hidden="true">
-        <span class="sky-moon"></span>
-        <span class="shooting-star" style="--star-left:35%;--star-top:3%;--star-duration:9s;--star-delay:-.4s"></span>
-        <span class="shooting-star" style="--star-left:72%;--star-top:10%;--star-duration:9s;--star-delay:-1.9s"></span>
-        <span class="shooting-star" style="--star-left:98%;--star-top:28%;--star-duration:9s;--star-delay:-3.4s"></span>
-        <span class="shooting-star" style="--star-left:46%;--star-top:35%;--star-duration:9s;--star-delay:-4.9s"></span>
-        <span class="shooting-star" style="--star-left:83%;--star-top:2%;--star-duration:9s;--star-delay:-6.4s"></span>
-        <span class="shooting-star" style="--star-left:26%;--star-top:46%;--star-duration:9s;--star-delay:-7.9s"></span>
-    </div>
-    <nav aria-label="Project navigation">
-        <a class="portfolio-return" href="https://itzlebyy.github.io/#projekty">← vo<span class="dotted-j">j</span>ta / portfolio</a>
-        <a href="index.html">GoonOnTheGo Search</a>
-    </nav>
+    <header class="site-header advanced-header">
+        <a class="wordmark wordmark-small" href="index.html" aria-label="Google home"><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span></a>
+        <nav aria-label="Search navigation">
+            <a href="index.html">Google Search</a>
+        </nav>
+    </header>
 
-    <h2 class="advanced-title">Advanced Search</h2>
-    <hr>
+    <main class="advanced-main">
+        <div class="advanced-title">
+            <h1>Advanced Search</h1>
+        </div>
 
-    <main class="advanced-page">
-        <p>Find pages with...</p>
+        <form class="advanced-form" action="https://www.google.com/search" method="get" role="search">
+            <h2>Find pages with…</h2>
+            <p class="hints-heading">To do this in the search box</p>
 
-        <form action="https://www.google.com/search" method="GET">
-            <div class="field">
-                <label for="all">all these words:</label>
-                <input id="all" type="text" name="as_q">
-            </div>
+            <label for="all-words">all these words:</label>
+            <input id="all-words" type="text" name="as_q" aria-describedby="all-hint">
+            <p class="field-hint" id="all-hint">Type the words you need: <span class="example">northern lights Iceland</span></p>
 
-            <div class="field">
-                <label for="exact">this exact word or phrase:</label>
-                <input id="exact" type="text" name="as_epq">
-            </div>
+            <label for="exact-phrase">this exact word or phrase:</label>
+            <input id="exact-phrase" type="text" name="as_epq" aria-describedby="exact-hint">
+            <p class="field-hint" id="exact-hint">Use quotation marks: <span class="example">"northern lights"</span></p>
 
-            <div class="field">
-                <label for="any">any of these words:</label>
-                <input id="any" type="text" name="as_oq">
-            </div>
+            <label for="any-words">any of these words:</label>
+            <input id="any-words" type="text" name="as_oq" aria-describedby="any-hint">
+            <p class="field-hint" id="any-hint">Separate alternatives with OR: <span class="example">Iceland OR Norway</span></p>
 
-            <div class="field">
-                <label for="none">none of these words:</label>
-                <input id="none" type="text" name="as_eq">
-            </div>
+            <label for="excluded-words">none of these words:</label>
+            <input id="excluded-words" type="text" name="as_eq" aria-describedby="excluded-hint">
+            <p class="field-hint" id="excluded-hint">Add a minus before exclusions: <span class="example">-tour -"travel guide"</span></p>
 
-            <div class="advanced-button">
-                <button type="submit">Advanced Search</button>
+            <div class="advanced-actions">
+                <button class="primary-button" type="submit">Advanced Search</button>
             </div>
         </form>
     </main>
-    <a class="ai-citation" href="README.md#citace-ai">Citace použití AI ↗</a>
+
+    <footer class="site-footer">
+        <span>CS50 Web · Search</span>
+        <a href="https://cs50.harvard.edu/web/projects/0/search/">About this project</a>
+    </footer>
 </body>
 </html>

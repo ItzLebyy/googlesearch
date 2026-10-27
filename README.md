@@ -1,30 +1,34 @@
-# GoonOnTheGo Search
+# Google Search — CS50 Web
 
-Standalone copy of the Google search project from the portfolio. Includes web search, image search, advanced search, and the original pixel theme. Uses only HTML, CSS, and local assets; no build or dependencies required.
+Responzivní rozhraní vyhledávače podle [zadání CS50 Web: Search](https://cs50.harvard.edu/web/projects/0/search/). Projekt obsahuje pouze HTML a CSS, bez JavaScriptu, knihoven nebo sestavování.
+
+## Stránky a funkce
+
+- `index.html`: běžné vyhledávání (`q`) a tlačítko **I'm Feeling Lucky** (`btnI`).
+- `images.html`: vyhledávání obrázků (`q` a `udm=2`).
+- `advanced.html`: všechna slova (`as_q`), přesná fráze (`as_epq`), libovolná slova (`as_oq`) a vyloučená slova (`as_eq`).
+- `style.css`: společný vzhled, responzivní rozložení a zvýraznění při ovládání klávesnicí.
+
+Formuláře používají metodu GET a odesílají dotazy na `https://www.google.com/search`. Výsledky zobrazuje Google. U funkce I'm Feeling Lucky může Google zobrazit potvrzení přesměrování; zadání s tím počítá.
+
+## Spuštění
+
+Otevřete `index.html` v prohlížeči. Pro náhled přes lokální server spusťte v této složce:
+
+```sh
+python -m http.server 8000
+```
+
+Potom otevřete <http://localhost:8000>.
 
 ## GitHub Pages
 
-1. Upload these files and the `assets/` folder to the root of `ItzLebyy/googlesearch` on the `main` branch. Include `.nojekyll`.
-2. In **Settings ? Pages**, choose **Deploy from a branch**, **main**, **/ (root)**, then **Save**.
-3. Once published, open https://itzlebyy.github.io/googlesearch/.
+- Repozitář: <https://github.com/VojtechBedan/googlesearch>
+- Web: <https://vojtechbedan.github.io/googlesearch/>
+- Zdroj publikování: větev `main`, složka `/ (root)`.
 
-All local links are relative and work under the repository path. The portfolio navigation link opens the separately hosted portfolio.
+Soubor `.nojekyll` umožňuje přímé publikování statických souborů. Odkazy mezi stránkami jsou relativní, takže fungují i v podadresáři GitHub Pages.
 
-## Local preview
+## Poznámka
 
-Open `index.html`, or run `python -m http.server 8000` and visit http://localhost:8000/.
-
-## Files
-
-- `index.html` ? web search and I'm Feeling Lucky.
-- `images.html` ? image search.
-- `advanced.html` ? advanced search fields.
-- `style.css` ? search project styles.
-- `assets/` ? shared pixel theme, backgrounds, favicon, local font and its license.
-- `.nojekyll` ? serves the static site without Jekyll processing.
-
-## Citace AI
-
-Tento vyhled?va? vznikl za pomoci um?l? inteligence p?i tvorb? HTML, CSS a vzhledu. Autor ur?il zad?n? a kone?nou podobu projektu. Tato samostatn? verze kop?ruje vyhled?va? z portfolia a upravuje cesty pro GitHub Pages.
-
-P?smo Pixelify Sans od Stefie Justprince je distribuov?no beze zm?n pod licenc? SIL Open Font License 1.1. Pln? licence je v [assets/fonts/OFL-PixelifySans.txt](assets/fonts/OFL-PixelifySans.txt).
+Jde o neoficiální studijní projekt, nikoli službu společnosti Google. Kód byl vytvořen s pomocí AI (OpenAI Codex).

@@ -1,44 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoonOnTheGo Images</title>
-    <meta name="theme-color" content="#1c2a20">
-    <link rel="icon" type="image/svg+xml" href="assets/vojta-mark.svg">
-    <link rel="stylesheet" href="assets/pixel-theme.css">
+    <meta name="description" content="Find images using Google Image Search. A CS50 Web project.">
+    <title>Google Images</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="pixel-sky" aria-hidden="true">
-        <span class="sky-moon"></span>
-        <span class="shooting-star" style="--star-left:35%;--star-top:3%;--star-duration:9s;--star-delay:-.4s"></span>
-        <span class="shooting-star" style="--star-left:72%;--star-top:10%;--star-duration:9s;--star-delay:-1.9s"></span>
-        <span class="shooting-star" style="--star-left:98%;--star-top:28%;--star-duration:9s;--star-delay:-3.4s"></span>
-        <span class="shooting-star" style="--star-left:46%;--star-top:35%;--star-duration:9s;--star-delay:-4.9s"></span>
-        <span class="shooting-star" style="--star-left:83%;--star-top:2%;--star-duration:9s;--star-delay:-6.4s"></span>
-        <span class="shooting-star" style="--star-left:26%;--star-top:46%;--star-duration:9s;--star-delay:-7.9s"></span>
-    </div>
-    <nav aria-label="Project navigation">
-        <a class="portfolio-return" href="https://itzlebyy.github.io/#projekty">← vo<span class="dotted-j">j</span>ta / portfolio</a>
-        <a href="index.html">GoonOnTheGo Search</a>
-    </nav>
+    <header class="site-header">
+        <nav aria-label="Search navigation">
+            <a href="index.html">Google Search</a>
+        </nav>
+    </header>
 
-    <main class="search-page">
-        <h1 class="logo" aria-label="GoonOnTheGo Images"><span class="blue">Goon</span><span class="red">On</span><span class="yellow">The</span><span class="green">Go</span><span class="images-label">Images</span></h1>
+    <main class="search-main">
+        <h1 class="wordmark image-wordmark" aria-label="Google Images"><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span><span class="images-label">images</span></h1>
 
-        <form action="https://www.google.com/search" method="GET">
+        <form class="search-form" action="https://www.google.com/search" method="get" role="search">
             <input type="hidden" name="udm" value="2">
-
-            <input class="search-box" type="text"
-                   name="q" aria-label="Image search" placeholder="Search images..." required>
-
-            <div class="buttons">
+            <div class="search-bar">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
+                <label class="visually-hidden" for="image-query">Search images</label>
+                <input id="image-query" type="text" name="q" autocomplete="off" spellcheck="false" required>
+            </div>
+            <div class="search-actions">
                 <button type="submit">Search Images</button>
             </div>
         </form>
     </main>
-    <a class="ai-citation" href="README.md#citace-ai">Citace použití AI ↗</a>
+
+    <footer class="site-footer">
+        <span>CS50 Web · Search</span>
+        <a href="https://cs50.harvard.edu/web/projects/0/search/">About this project</a>
+    </footer>
 </body>
 </html>
