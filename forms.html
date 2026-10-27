@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ukázka HTML formulářů: 22 typů input, výběry, přepínače, textová oblast a další prvky.">
+    <title>Formuláře | Google Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <a class="skip-link" href="#obsah">Přejít na obsah</a>
+    <header class="site-header advanced-header">
+        <a class="wordmark wordmark-small" href="index.html" aria-label="Google Search – úvod"><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span></a>
+        <nav aria-label="Navigace projektu">
+            <a href="index.html">Search</a>
+            <a href="images.html">Images</a>
+            <a href="advanced.html">Advanced Search</a>
+            <a href="forms.html" aria-current="page">Formuláře</a>
+            <a href="https://vojtechbedan.github.io/">Portfolio</a>
+        </nav>
+    </header>
+    <main class="forms-main" id="obsah">
+        <div class="forms-intro">
+            <p class="forms-eyebrow">GOOGLE SEARCH / HTML LAB</p>
+            <h1>Malá laboratoř formulářů</h1>
+            <p>Od obyčejného textu po výběr barvy. Vyzkoušej si, co umí samotné HTML.</p>
+            <div class="forms-tags"><span>22 typů input</span><span>6 tematických sekcí</span><span>Ovládání klávesnicí</span></div>
+        </div>
+        <p class="demo-note" id="demo-note">Jde o školní ukázku. Používej smyšlené údaje. Nic se neukládá ani neodesílá; tlačítka pouze předvedou chování formuláře. Pole označená * jsou povinná.</p>
+        <!-- method="dialog" validates fields without sending data or navigating. -->
+        <form id="demo-form" method="dialog" aria-describedby="demo-note" autocomplete="off">
+            <div class="forms-grid">
+                <fieldset class="form-section">
+                    <legend><span>01</span> Text a kontakty</legend>
+                    <div class="control"><label for="nickname">Přezdívka * <code>text</code></label><input id="nickname" type="text" placeholder="Třeba student01" required minlength="2" maxlength="40"></div>
+                    <div class="control"><label for="email">E-mail * <code>email</code></label><input id="email" type="email" placeholder="student@example.com" required></div>
+                    <div class="control"><label for="password">Ukázkové heslo <code>password</code></label><input id="password" type="password" placeholder="Pouze smyšlené heslo" minlength="8" autocomplete="new-password" aria-describedby="password-hint"><small id="password-hint">Pokud vyplníš, použij alespoň 8 znaků.</small></div>
+                    <div class="control"><label for="phone">Telefon <code>tel</code></label><input id="phone" type="tel" placeholder="+420 123 456 789"></div>
+                    <div class="control"><label for="website">Webová stránka <code>url</code></label><input id="website" type="url" placeholder="https://example.com"></div>
+                    <div class="control"><label for="search">Vyhledávací pole <code>search</code></label><input id="search" type="search" placeholder="Zkus něco napsat…"></div>
+                </fieldset>
+                <fieldset class="form-section">
+                    <legend><span>02</span> Čísla, datum a čas</legend>
+                    <div class="control"><label for="count">Počet výsledků <code>number</code></label><input id="count" type="number" min="1" max="100" step="1" value="10"></div>
+                    <div class="control"><label for="date">Datum <code>date</code></label><input id="date" type="date"></div>
+                    <div class="control"><label for="time">Čas <code>time</code></label><input id="time" type="time"></div>
+                    <div class="control"><label for="meeting">Datum a čas <code>datetime-local</code></label><input id="meeting" type="datetime-local"></div>
+                    <div class="control"><label for="month">Měsíc <code>month</code></label><input id="month" type="month"></div>
+                    <div class="control"><label for="week">Týden <code>week</code></label><input id="week" type="week"></div>
+                    <p class="section-note">Podoba kalendářů závisí na prohlížeči.</p>
+                </fieldset>
+                <fieldset class="form-section">
+                    <legend><span>03</span> Možnosti a výběry</legend>
+                    <div class="control"><label for="language">Jazyk výsledků <code>select</code></label><select id="language"><option value="">Vyber jazyk</option><optgroup label="Evropské jazyky"><option value="cs">Čeština</option><option value="en">Angličtina</option><option value="de">Němčina</option></optgroup><optgroup label="Další jazyky"><option value="ja">Japonština</option></optgroup></select></div>
+                    <div class="control"><label for="topics">Oblíbená témata <code>select multiple</code></label><select id="topics" multiple size="4" aria-describedby="topics-hint"><option>Technologie</option><option>Hudba</option><option>Sport</option><option>Cestování</option></select><small id="topics-hint">Na počítači vybírej více možností s Ctrl nebo Cmd.</small></div>
+                    <div class="control"><label for="browser">Prohlížeč s našeptávačem <code>datalist</code></label><input id="browser" type="text" list="browsers" placeholder="Vyber nebo napiš vlastní"><datalist id="browsers"><option value="Chrome"></option><option value="Edge"></option><option value="Firefox"></option><option value="Safari"></option></datalist></div>
+                    <fieldset class="choice-group"><legend>Typ výsledků <code>radio</code></legend><label><input type="radio" name="result-type" value="all" checked> Vše</label><label><input type="radio" name="result-type" value="images"> Obrázky</label><label><input type="radio" name="result-type" value="videos"> Videa</label></fieldset>
+                    <fieldset class="choice-group"><legend>Doplňky <code>checkbox</code></legend><label><input type="checkbox" checked> Otevřít výsledky v nové kartě</label><label><input type="checkbox"> Zobrazit jen české stránky</label></fieldset>
+                </fieldset>
+                <fieldset class="form-section">
+                    <legend><span>04</span> Vzhled a soubory</legend>
+                    <div class="control"><label for="color">Oblíbená barva <code>color</code></label><input id="color" type="color" value="#1a73e8"></div>
+                    <div class="control"><label for="range">Počet bodů <code>range</code></label><div class="range-row"><span>0</span><input id="range" type="range" min="0" max="100" value="50" step="5" aria-describedby="range-hint"><span>100</span></div><small id="range-hint">Rozsah 0–100, krok 5, výchozí hodnota 50.</small></div>
+                    <div class="control"><label for="file">Obrázky z počítače <code>file</code></label><input id="file" type="file" accept="image/*" multiple aria-describedby="file-hint"><small id="file-hint">Výběr zůstane pouze v prohlížeči. Soubory se nenahrávají.</small></div>
+                    <div class="control"><label for="message">Poznámka <code>textarea</code></label><textarea id="message" rows="5" maxlength="500" placeholder="Místo pro delší text…"></textarea></div>
+                </fieldset>
+                <fieldset class="form-section">
+                    <legend><span>05</span> Stavy a ukazatele</legend>
+                    <div class="control"><label for="readonly">Pouze ke čtení <code>readonly</code></label><input id="readonly" type="text" value="Google Search – školní projekt" readonly></div>
+                    <div class="control"><label for="disabled">Nedostupné pole <code>disabled</code></label><input id="disabled" type="text" value="Toto pole nelze upravit" disabled></div>
+                    <div class="control"><label for="progress">Ukázka průběhu: 60 % <code>progress</code></label><progress id="progress" value="60" max="100">60 %</progress></div>
+                    <div class="control"><label for="meter">Ukázka zaplnění: 3 z 5 <code>meter</code></label><meter id="meter" min="0" max="5" low="1" high="4" optimum="3" value="3">3 z 5</meter></div>
+                    <div class="control"><label for="sample-output">Ukázka výstupu <code>output</code></label><output id="sample-output">50</output><small>Statický příklad výstupu, který se nepřepočítává.</small></div>
+                    <input type="hidden" id="demo-version" value="school-demo">
+                    <p class="section-note">V kódu je i <code>input type="hidden"</code>. Na stránce se nezobrazuje.</p>
+                </fieldset>
+                <fieldset class="form-section">
+                    <legend><span>06</span> Tlačítka v praxi</legend>
+                    <p class="section-note">Odesílací tlačítka spustí kontrolu polí v prohlížeči. Pokud jsou údaje platné, nic dalšího se nestane a údaje se neodešlou. Reset obnoví výchozí hodnoty.</p>
+                    <div class="demo-buttons">
+                        <button class="primary-button" type="submit">Ověřit formulář</button>
+                        <button type="reset">Obnovit formulář</button>
+                        <button type="button" disabled>Ukázka tlačítka</button>
+                    </div>
+                    <p class="section-note">Stejné typy tlačítek pomocí <code>input</code>:</p>
+                    <div class="demo-buttons">
+                        <input type="submit" value="Ověřit (input)">
+                        <input type="reset" value="Reset (input)">
+                        <input type="button" value="Ukázka tlačítka (input)" disabled>
+                        <input type="image" src="send.svg" alt="Ověřit formulář obrázkovým tlačítkem" width="44" height="44">
+                    </div>
+                    <p class="section-note"><code>button · submit · reset · image</code></p>
+                    <p class="section-note">Obecná tlačítka typu <code>button</code> jsou zde pouze neaktivní ukázky.</p>
+                    <details class="form-help">
+                        <summary>Nápověda</summary>
+                        <p>Vyplň přezdívku a e-mail, změň libovolné možnosti a stiskni ověření formuláře. Prohlížeč upozorní na chybějící nebo neplatné údaje. Reset vrátí původní hodnoty. Celá ukázka používá pouze HTML a CSS.</p>
+                    </details>
+                </fieldset>
+            </div>
+        </form>
+    </main>
+    <footer class="site-footer">
+        <span>CS50 Web · Search</span>
+        <a href="https://github.com/VojtechBedan/googlesearch/blob/main/citace.md">Citace a zdroje</a>
+        <nav class="validation-links" aria-label="Validace této stránky">
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fvojtechbedan.github.io%2Fgooglesearch%2Fforms.html" target="_blank" rel="noopener noreferrer">HTML validátor ↗</a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvojtechbedan.github.io%2Fgooglesearch%2Fforms.html&amp;profile=css3svg&amp;lang=cs" target="_blank" rel="noopener noreferrer">CSS validátor ↗</a>
+        </nav>
+    </footer>
+</body>
+</html>
