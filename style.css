@@ -109,7 +109,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .search-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
-button {
+button, .search-button {
     min-height: 40px;
     padding: 0 16px;
     border: 1px solid transparent;
@@ -119,8 +119,9 @@ button {
     font: 14px Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
-button:hover { border-color: #dadce0; box-shadow: 0 1px 1px #0000001a; }
-button:active { background: #e8eaed; }
+.search-button { display: inline-flex; align-items: center; justify-content: center; }
+button:hover, .search-button:hover { border-color: #dadce0; box-shadow: 0 1px 1px #0000001a; text-decoration: none; }
+button:active, .search-button:active { background: #e8eaed; }
 
 .site-footer {
     display: flex;
@@ -197,7 +198,7 @@ button:active { background: #e8eaed; }
     .site-header nav { gap: 16px; }
     .wordmark:not(.wordmark-small) { font-size: 72px; letter-spacing: -4px; }
     .search-main { padding-top: 68px; }
-    button { min-height: 44px; }
+    button, .search-button { min-height: 44px; }
     .site-footer { padding: 12px 20px; }
     .advanced-title { padding: 20px 24px; }
     .advanced-form { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 28px 24px 48px; }

@@ -4,7 +4,7 @@ Responzivní rozhraní vyhledávače podle [zadání CS50 Web: Search](https://c
 
 ## Stránky a funkce
 
-- `index.html`: běžné vyhledávání (`q`) a tlačítko **I'm Feeling Lucky** (`btnI`).
+- `index.html`: běžné vyhledávání (`q`) a odkaz **I'm Feeling Lucky** na Google Doodles.
 - `images.html`: vyhledávání obrázků (`q` a `udm=2`).
 - `advanced.html`: všechna slova (`as_q`), přesná fráze (`as_epq`), libovolná slova (`as_oq`) a vyloučená slova (`as_eq`).
 - `forms.html`: ukázka všech 22 typů input, select, datalist, textarea, output, meter a progress.
@@ -13,7 +13,7 @@ Responzivní rozhraní vyhledávače podle [zadání CS50 Web: Search](https://c
 - `VIDEO.md`: scénář pro vlastní nahrání a odevzdání videa.
 - `style.css`: společný vzhled, responzivní rozložení a zvýraznění při ovládání klávesnicí.
 
-Vyhledávací formuláře používají metodu GET a odesílají dotazy na `https://www.google.com/search`. Výsledky zobrazuje Google. U funkce I'm Feeling Lucky může Google zobrazit potvrzení přesměrování; zadání s tím počítá.
+Vyhledávací formuláře používají metodu GET a odesílají dotazy na `https://www.google.com/search`. Výsledky zobrazuje Google. Odkaz I'm Feeling Lucky otevírá `https://doodles.google/` nezávisle na obsahu vyhledávacího pole.
 
 ## Spuštění
 
