@@ -135,6 +135,7 @@ button:active { background: #e8eaed; }
     font-size: 13px;
 }
 .site-footer a { display: inline-flex; align-items: center; min-height: 40px; }
+.validation-links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 
 .advanced-header { justify-content: space-between; gap: 24px; }
 .wordmark-small { margin: 0; font-size: 30px; letter-spacing: -1.8px; }
